@@ -27,6 +27,12 @@ const handleApproverChange = (event) => {
 
 const handleSubmit = (e) => {
     e.preventDefault(); 
+    if(category==='Transportation' & amount < 1000){
+        console.log('value need to be higher than 1000')
+        alert('value need to be higher than 1000')
+        setError(false)
+    }
+    else{
     addPosts(name,employee_id,email,amount,category,description,approver);
     setName('');
     setid('');
@@ -35,7 +41,7 @@ const handleSubmit = (e) => {
     setdescription('');
     setCategory('');
     setCategory('');
-    setApprover('');
+    setApprover('');}
   };
 
 
